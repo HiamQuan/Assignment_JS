@@ -10,26 +10,26 @@ const NewsAdd = {
    ${FormNews.print(null)}
    </div>`;
   },
-  afterPrint() {
-    // const btns = document.querySelectorAll('#btn-submit');
-    // btns.forEach((btn) => {
-    //   const { id } = btn.dataset;
-    //   btn.addEventListener('Click', () => {
-    //     if (id === '') {
-    //       const newTitle = document.getElementById('title').value;
-    //       const describe = document.getElementById('describe').value;
-    //       const newId = listItem.length + 1;
-    //       const newPost = {
-    //         id: newId,
-    //         title: newTitle,
-    //         desc: describe,
-    //         createAt: ' ',
-    //         img: ' ',
-    //       };
-    //       listItem.push(newPost);
-    //     }
-    //   });
-    // });
-  },
+  // afterPrint() {
+  // const btns = document.querySelectorAll('#btn-submit');
+  // btns.forEach((btn) => {
+  //   const { id } = btn.dataset;
+  //   btn.addEventListener('Click', () => {
+  //     if (id === '') {
+  //       const newTitle = document.getElementById('title').value;
+  //       const describe = document.getElementById('describe').value;
+  //       const newId = listItem.length + 1;
+  //       const newPost = {
+  //         id: newId,
+  //         title: newTitle,
+  //         desc: describe,
+  //         createAt: ' ',
+  //         img: ' ',
+  //       };
+  //       listItem.push(newPost);
+  //     }
+  //   });
+  // });
+  // },
 };
 export default NewsAdd;

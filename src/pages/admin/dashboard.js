@@ -1,4 +1,4 @@
-import SideBar from '../component/sidebar';
+import SideBar from '../../component/admin/sidebar';
 
 const DashBoard = {
   print() {

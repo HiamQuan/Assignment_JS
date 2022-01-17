@@ -3,7 +3,7 @@ const FormNews = {
     return /* html */`<div class="mx-auto">
     <div class=" min-w-full">
       <div class="mt-5 md:mt-0 min-w-full">
-        <form action="#" method="POST" class="w-full">
+        <form action="/admin/news" method="GET" class="w-full">
           <div class="shadow sm:rounded-md sm:overflow-hidden">
             <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
               <div class="grid grid-cols-3 gap-96">
@@ -70,7 +70,7 @@ const FormNews = {
               </div>
             </div>
             <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-              <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              <button id="btn-submit" data-id= ${result !== null ? result.id : ''} type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                 Save
               </button>
             </div>

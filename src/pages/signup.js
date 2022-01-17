@@ -1,6 +1,9 @@
+import Footer from '../component/footer';
+import Header from '../component/header';
+
 const SignUp = {
   print() {
-    return /* html */ `
+    return /* html */ `${Header.print()}
  <div class="h-screen bg-gray-100 flex justify-center">
    <div class="py-6 px-8 h-80 mt-20 bg-white rounded shadow-xl">
      <form action="" class="w-80">
@@ -18,7 +21,8 @@ const SignUp = {
        <button class="cursor-pointer py-2 px-4 block mt-6 bg-indigo-500 text-white font-bold w-full text-center rounded">Login</button>
      </form>
    </div>
- </div>`;
+ </div>
+ ${Footer.print()}`;
   },
 };
 

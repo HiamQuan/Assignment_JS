@@ -1,6 +1,6 @@
-import FormNews from '../component/formNews';
-import SideBar from '../component/sidebar';
-import { listItem } from '../data';
+import FormNews from '../../component/admin/formNews';
+import SideBar from '../../component/admin/sidebar';
+import { listItem } from '../../data';
 
 const AdminNewsEdit = {
   print(id) {

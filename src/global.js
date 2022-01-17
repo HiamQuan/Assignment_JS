@@ -1,14 +1,7 @@
-import Footer from './component/footer';
-import Header from './component/header';
-
 const RenderPage = {
-  render(content) {
-    document.querySelector('#header').innerHTML = Header.print();
-    document.querySelector('#app').innerHTML = content;
-    document.querySelector('#footer').innerHTML = Footer.print();
-  },
-  renderAdmin(content) {
-    document.querySelector('#app').innerHTML = content;
+  render(content, id) {
+    document.querySelector('#app').innerHTML = content.print(id);
+    if (content.afterPrint()) content.afterPrint();
   },
 };
 export default RenderPage;

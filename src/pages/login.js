@@ -1,6 +1,10 @@
+import Header from '../component/header';
+import Footer from '../component/footer';
+
 const Login = {
   print() {
-    return /* html */ `<section class="min-h-screen flex items-stretch text-white ">
+    return /* html */ `${Header.print()}
+    <section class="min-h-screen flex items-stretch text-white ">
     <div class="lg:flex w-1/2 hidden bg-gray-500 bg-no-repeat bg-cover relative items-center" style="background-image: url(https://images.unsplash.com/photo-1577495508048-b635879837f1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80);">
         <div class="absolute bg-black opacity-60 inset-0 z-0"></div>
         <div class="w-full px-24 z-10">
@@ -61,7 +65,8 @@ const Login = {
             </form>
         </div>
     </div>
-</section>`;
+</section>
+${Footer.print()}`;
   },
 };
 

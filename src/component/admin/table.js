@@ -1,4 +1,4 @@
-import { listItem } from '../data';
+import { listItem } from '../../data';
 
 const TableNews = {
   print() {
@@ -48,7 +48,7 @@ const TableNews = {
                 ${post.createdAt}
               </td>
               <td class="px-4 py-4 whitespace-wrap text-right text-sm font-medium">
-                <a href="/admin/news/${post.id}/edit" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                <a href="/admin/news/${post.id}/edit" data-id:${post.id} class="text-indigo-600 hover:text-indigo-900">Edit</a>
               </td>
               <td class="px-4 py-4 whitespace-wrap text-right text-sm font-medium">
               <a href="/admin/news/${post.id}/remove" class="text-indigo-600 hover:text-indigo-900">Remove</a>

@@ -9,10 +9,10 @@ import TuyenSinh from './pages/tuyensinh';
 import DaoTao from './pages/ctdaotao';
 import GocSinhVien from './pages/gocsinhvien';
 import TuyenDung from './pages/tuyendung';
-import DashBoard from './pages/dashboard';
-import NewsAdmin from './pages/news-admin';
-import AdminNewsEdit from './pages/newsEdit';
-import NewsAdd from './pages/newsAdd';
+import DashBoard from './pages/admin/dashboard';
+import NewsAdmin from './pages/admin/news-admin';
+import AdminNewsEdit from './pages/admin/newsEdit';
+import NewsAdd from './pages/admin/newsAdd';
 
 const router = new Navigo('/', { linksSelector: 'a' });
 
@@ -24,46 +24,44 @@ const router = new Navigo('/', { linksSelector: 'a' });
 
 router.on({
   '/login': () => {
-    RenderPage.render(Login.print());
+    RenderPage.render(Login);
   },
   '/signup': () => {
-    RenderPage.render(SignUp.print());
+    RenderPage.render(SignUp);
   },
   '/': () => {
-    RenderPage.render(HomePage.print());
+    RenderPage.render(HomePage);
   },
   '/about': () => {
-    RenderPage.render(AboutPage.print());
+    RenderPage.render(AboutPage);
   },
   '/gocsinhvien': () => {
-    RenderPage.render(GocSinhVien.print());
+    RenderPage.render(GocSinhVien);
   },
   // eslint-disable-next-line quotes
   "/news/:id": ({ data }) => {
-    const { id } = data;
-    RenderPage.render(DetailPage.print(+id));
+    RenderPage.render(DetailPage, data.id);
   },
   '/tuyensinh': () => {
-    RenderPage.render(TuyenSinh.print());
+    RenderPage.render(TuyenSinh);
   },
   '/ctdaotao': () => {
-    RenderPage.render(DaoTao.print());
+    RenderPage.render(DaoTao);
   },
   '/tuyendung': () => {
-    RenderPage.render(TuyenDung.print());
+    RenderPage.render(TuyenDung);
   },
   '/admin/dashboard': () => {
-    RenderPage.render(DashBoard.print());
+    RenderPage.render(DashBoard);
   },
   '/admin/news': () => {
-    RenderPage.render(NewsAdmin.print());
+    RenderPage.render(NewsAdmin);
   },
   '/admin/news/:id/edit': ({ data }) => {
-    const { id } = data;
-    RenderPage.render(AdminNewsEdit.print(id));
+    RenderPage.render(AdminNewsEdit, data.id);
   },
   '/admin/news/add': () => {
-    RenderPage.render(NewsAdd.print(null));
+    RenderPage.render(NewsAdd);
   },
 });
 

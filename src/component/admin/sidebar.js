@@ -1,7 +1,7 @@
 const SideBar = {
   print() {
-    return /* html */ `<div class="md:flex flex-col md:flex-row md:min-h-screen ">
-    <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0" x-data="{ open: false }">
+    return /* html */ `<div class="md:flex flex-col md:flex-row md:min-h-screen w-1/6 ">
+    <div @click.away="open = false" class="flex flex-col w-full md:w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0" x-data="{ open: false }">
       <div class="flex-shrink-0 px-4 py-4 flex flex-row items-center justify-between">
         <a href="/admin/dashboard" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">DashBoard</a>
         <button class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">

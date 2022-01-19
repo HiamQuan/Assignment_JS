@@ -2,7 +2,7 @@
 const Banner = {
   print() {
     // eslint-disable-next-line quotes
-    return /* html */ `<img src="./src/img/banner1.jpg" alt=""/>`;
+    return /* html */ `<img src="http://placeimg.com/1300/400" class="img-fluid" alt=""/>`;
   },
 };
 

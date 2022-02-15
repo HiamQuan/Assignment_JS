@@ -16,15 +16,25 @@ import NewsAdd from './pages/admin/newsAdd';
 
 const router = new Navigo('/', { linksSelector: 'a' });
 
-// const render = (content) => {
-//   document.querySelector('#header').innerHTML = Header.print();
-//   document.querySelector('#app').innerHTML = content;
-//   document.querySelector('#footer').innerHTML = Footer.print();
-// };
+router.on('/admin/*/', () => {}, {
+  before(done, match) {
+    if (localStorage.getItem('user')) {
+      const userId = JSON.parse(localStorage.getItem('user')).user.id;
+      if (userId === 1) {
+        // render dựa trên router
+        done();
+      } else {
+        document.location.href = '/';
+      }
+    } else {
+      document.location.href = '/';
+    }
+  },
+});
 
 router.on({
-  '/login': () => {
-    RenderPage.render(Login);
+  '/login': async () => {
+    await RenderPage.render(Login);
   },
   '/signup': () => {
     RenderPage.render(SignUp);

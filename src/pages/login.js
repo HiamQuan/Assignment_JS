@@ -38,9 +38,9 @@ const Login = {
             <p class="text-gray-100">
                 or use email your account
             </p>
-            <form action="" class="sm:w-2/3 w-full px-4 lg:px-0 mx-auto" id="formSignin">
+            <form class="sm:w-2/3 w-full px-4 lg:px-0 mx-auto" id="formSignin">
                 <div class="pb-2 pt-4">
-                    <input type="email" name="email" id="email" placeholder="Email" class="block w-full p-4 text-lg rounded-sm bg-black">
+                    <input type="text" name="email" id="email" placeholder="Email" class="block w-full p-4 text-lg rounded-sm bg-black">
                 </div>
                 <div class="pb-2 pt-4">
                     <input class="block w-full p-4 text-lg rounded-sm bg-black" type="password" name="password" id="password" placeholder="Password">

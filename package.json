@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start:server": "npx json-server-auth --watch db.json --port 3002"
+    "start:server": "json-server-auth --watch --host 192.168.1.206 db.json --port 3002"
   },
   "keywords": [],
   "author": "",

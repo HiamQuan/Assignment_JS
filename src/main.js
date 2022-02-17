@@ -14,7 +14,7 @@ import NewsAdmin from './pages/admin/news-admin';
 import AdminNewsEdit from './pages/admin/newsEdit';
 import NewsAdd from './pages/admin/newsAdd';
 
-const router = new Navigo('/', { linksSelector: 'a' });
+const router = new Navigo('/', { linksSelector: 'a', hash: true });
 
 router.on('/admin/*/', () => {}, {
   before(done, match) {

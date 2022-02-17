@@ -16,8 +16,8 @@ const NewsAdd = {
     const formAdd = document.querySelector('#form-add-post');
     const imgPreview = document.querySelector('#img-preview');
     const imgPost = document.querySelector('#img-post');
-    const CLOUDINARY_API_URL = 'https://api.cloudinary.com/v1_1/ecommercer2021/image/upload';
-    const CLOUDINARY_PRESET = 'jkbdphzy';
+    const CLOUDINARY_API_URL = 'https://api.cloudinary.com/v1_1/quannaph18209/image/upload';
+    const CLOUDINARY_PRESET = 'ngongquan';
 
     formAdd.addEventListener('submit', async (e) => {
       e.preventDefault();

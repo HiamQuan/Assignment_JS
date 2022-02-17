@@ -1,7 +1,8 @@
-import { listItem } from '../../data';
+import { getAll } from '../../api/posts';
 
 const TableNews = {
-  print() {
+  async print() {
+    const { data } = await getAll();
     return /* html */ `  <div class="flex flex-col m-auto">
     <div class="my-2 overflow-x-auto sm:-mx-6 lg:-mx-2">
       <div class="py-2 align-middle inline-block sm:px-2 lg:px-0">
@@ -24,7 +25,7 @@ const TableNews = {
               </tr>
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
-              ${listItem.map((post) =>/* html */`<tr>
+              ${data.map((post) =>/* html */`<tr>
               <td class="px-2 py-4 whitespace-wrap">
                 <div class="flex items-center">
                   <div class=" text-sm font-medium text-gray-900">
@@ -51,7 +52,7 @@ const TableNews = {
                 <a href="/admin/news/${post.id}/edit" data-id:${post.id} class="text-indigo-600 hover:text-indigo-900">Edit</a>
               </td>
               <td class="px-4 py-4 whitespace-wrap text-right text-sm font-medium">
-              <a href="/admin/news/${post.id}/remove" class="text-indigo-600 hover:text-indigo-900">Remove</a>
+              <button data-id="${post.id}" class="text-indigo-600 hover:text-indigo-900 btn">Remove</button>
             </td>
             </tr>`).join('')}
               <!-- More people... -->

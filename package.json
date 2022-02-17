@@ -16,7 +16,8 @@
     "axios": "^0.25.0",
     "cloudinary": "^1.28.1",
     "json": "^11.0.0",
-    "navigo": "^8.11.1"
+    "navigo": "^8.11.1",
+    "toastr": "^2.1.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.1",

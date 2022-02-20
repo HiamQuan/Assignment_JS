@@ -1,5 +1,9 @@
+import toastr from 'toastr';
+import reRender from '../utils';
+
 const Header = {
   print() {
+    console.log(JSON.parse(localStorage.getItem('user')).user.email);
     return /* html */ `<div class='header py-1'>
     <nav>
       <div class="">
@@ -15,14 +19,33 @@ const Header = {
               <a href="/admin/dashboard" class="hover:text-indigo-600 text-gray-700">Admin </a>
             </div>
           </div>
-          <div class="flex space-x-4 items-center">
+          </ul>
+          ${localStorage.getItem('user') ? `
+          <ul class="flex align-middle">
+          <li><a  id="account-email" class="block px-4 py-2  hover:text-red"></a></li>
+          <li><a  id="logout" class="block px-4 py-2 rounded-lg bg-indigo-500 text-white hover:text-gray-200 cursor-pointer">Logout</a></li>
+          </ul>`
+    : `   <div class="flex space-x-4 items-center">
             <a href="/login" class="text-gray-800 text-sm">LOGIN</a>
             <a href="/signup" class="bg-indigo-600 px-4 py-2 rounded text-white hover:bg-indigo-500 text-sm">SIGNUP</a>
-          </div>
+          </div>`}
         </div>
       </div>
     </nav>
   </div>`;
+  },
+  afterPrint() {
+    // lấy thông tin username từ localStorage và hiển thị ra ngoài
+    const username = JSON.parse(localStorage.getItem('user')).user.email;
+    const logout = document.querySelector('#logout');
+
+    document.querySelector('#account-email').innerHTML = username;
+    // logout
+    logout.addEventListener('click', () => {
+      toastr.success('Logout thành công');
+      localStorage.removeItem('user');
+      reRender(Header, '#header');
+    });
   },
 };
 

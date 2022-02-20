@@ -4,18 +4,23 @@ import Header from '../component/header';
 import Footer from '../component/footer';
 
 const HomePage = {
-  print() {
+  async print() {
     return /* html */ `
-            ${Header.print()}
+            <div id="header">  
+                ${Header.print()}
+            </div>
             <div class="my-7">
                 ${Banner.print()}
             </div>
             <div class="news bg-gray-50">
-                ${News.print()}
-                ${News.print()}
+                ${await News.print()}
+                ${await News.print()}
             </div>
             ${Footer.print()}      
         `;
+  },
+  afterPrint() {
+    return Header.afterPrint();
   },
 };
 export default HomePage;

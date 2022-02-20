@@ -1,12 +1,12 @@
 import axios from 'axios';
 import $ from 'jquery';
 import validate from 'jquery-validation';
-import FormNews from '../../component/admin/formNews';
-import SideBar from '../../component/admin/sidebar';
-import { add } from '../../api/posts';
+import SideBar from '../../../component/admin/sidebar';
+import { add } from '../../../api/products';
+import FormNews from '../../../component/admin/formNews';
 // import { listItem } from '../../data';
 
-const NewsAdd = {
+const UserAdd = {
   print() {
     return /* html */ `
    <div class="relative flex min-h-screen">
@@ -46,4 +46,4 @@ const NewsAdd = {
     });
   },
 };
-export default NewsAdd;
+export default UserAdd;

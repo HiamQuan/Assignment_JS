@@ -1,9 +1,9 @@
 import axios from 'axios';
-import { update, get } from '../../api/posts';
-import FormNews from '../../component/admin/formNews';
-import SideBar from '../../component/admin/sidebar';
+import { update, get } from '../../../api/products';
+import FormNews from '../../../component/admin/formNews';
+import SideBar from '../../../component/admin/sidebar';
 
-const AdminNewsEdit = {
+const ProductsEdit = {
   async print(id) {
     const { data } = await get(id);
     return /* html */`
@@ -54,10 +54,10 @@ const AdminNewsEdit = {
         id,
       })
         .then(() => {
-          document.location.href = '/admin/news';
+          document.location.href = '/admin/products';
         });
     });
   },
 };
 
-export default AdminNewsEdit;
+export default ProductsEdit;

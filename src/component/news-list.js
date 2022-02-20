@@ -1,7 +1,8 @@
-import { data } from '../data';
+import { getAll } from '../api/posts';
 
 const News = {
-  print() {
+  async print() {
+    const { data } = await getAll();
     return /* html */ `
         <div class="container mx-auto px-4">
             <h2 class="my-4 uppercase font">Tin tuc hoc tap</h2>

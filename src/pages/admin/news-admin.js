@@ -15,7 +15,7 @@ const NewsAdmin = {
       </div>
 </div>`;
   },
-  async afterPrint() {
+  afterPrint() {
     // lấy danh sách button sau khi render
     const buttons = document.querySelectorAll('.btn');
     // tạo vòng lặp cho nodelist button
@@ -29,7 +29,7 @@ const NewsAdmin = {
           remove(id).then(() => {
             console.log('Da xoa thanh cong');
             reRender(NewsAdmin, '#app');
-            toastr.error('Bạn đã xóa thành công !', { timeout: 5000 });
+            toastr.success('Bạn đã xóa thành công !');
           });
         }
       });

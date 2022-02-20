@@ -69,31 +69,59 @@
       "img": "http://placeimg.com/640/480/technics",
       "desc": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
       "id": "15"
-    },
-    {
-      "createdAt": "2022-01-15T04:39:49.775Z",
-      "title": "Blake Strosin",
-      "img": "http://placeimg.com/640/480/people",
-      "desc": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "id": "16"
     }
   ],
-  "products":[
+  "products": [
     {
-      "createdAt": "2022-01-15T04:39:49.775Z",
+      "title": "AngularJS",
+      "img": "http://res.cloudinary.com/quannaph18209/image/upload/v1645362977/dd31buluoretxamzk7pm.png",
+      "desc": "AngularJS is a toolset for building the framework most suited to your application development. It is fully extensible and works well with other libraries. Every feature can be modified or replaced to suit your unique development workflow and feature needs",
+      "price": "20000",
+      "createdAt": "2022-02-20T13:16:04.987Z",
+      "id": "Pipjqgz"
+    },
+    {
       "title": "JavaScript Nâng Cao",
-      "img": "http://placeimg.com/640/480/people",
-      "desc": "Làm quen với cơ chế xử lý bất đồng bộ, hàm Callback, cấu trúc project chuẩn,...",
-      "id": "1"
+      "img": "http://res.cloudinary.com/quannaph18209/image/upload/v1645363048/rbfvbuxon1f1nlhd50nn.png",
+      "desc": "avaScript là ngôn ngữ lập trình website phổ biến hiện nay, nó được tích hợp và nhúng vào HTML giúp website trở nên sống động hơn. JavaScript đóng vai trò như là một phần của trang web, thực thi cho phép Client-side script từ phía người dùng cũng như phía máy chủ (Nodejs) tạo ra các trang web động.",
+      "price": "20000",
+      "createdAt": "2022-02-20T13:16:45.998Z",
+      "id": "pVN8j5x"
+    },
+    {
+      "title": "ReactJS",
+      "img": "http://res.cloudinary.com/quannaph18209/image/upload/v1645363104/wmqes0mhgt2ua8fjm0qv.png",
+      "desc": "React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.\n\nDeclarative views make your code more predictable and easier to debug.",
+      "price": "20000",
+      "createdAt": "2022-02-20T13:17:43.979Z",
+      "id": "dNt_q00"
+    },
+    {
+      "title": "VueJS",
+      "img": "http://res.cloudinary.com/quannaph18209/image/upload/v1645363151/mhz80locrfu9eq7o6ytv.png",
+      "desc": "Vue (pronounced /vjuː/, like view) is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS and JavaScript, and provides a declarative and component-based programming model that helps you efficiently develop user interfaces, be it simple or complex.",
+      "price": "30000",
+      "createdAt": "2022-02-20T13:18:30.074Z",
+      "id": "u-85blw"
+    },
+    {
+      "title": "C++",
+      "img": "http://res.cloudinary.com/quannaph18209/image/upload/v1645363193/fexsv2agxrucznotypip.jpg",
+      "desc": "Khi bắt đầu học lập trình, có rất nhiều ngôn ngữ để lựa chọn. C/C++ là một ngôn ngữ lâu đời, có tốc độ nhanh, các kiểu dữ liệu rõ ràng. Nếu như làm chủ được ngôn ngữ nền tảng như C/C++ thì sau này học các ngôn ngữ khác trở nên dễ dàng hơn, do đó rất phù hợp với người mới bắt đầu. Học lập trình C/C++ có rất nhiều ứng dụng và mở ra cho bạn cực kỳ đa dạng các cơ hội để làm việc cho các công ty/tập đoàn lớn.\n\nTheo mình thấy, với người mới học thì C hay C++ không có quá nhiều sự khác biệt trong cú pháp, C++ còn có thể sử dụng để lập trình hướng đối tượng -  Phần này sẽ không được giới thiệu vì trong khuôn khổ bài viết là hướng dẫn lập tình C++ cơ bản. Hiện tại Codelearn đã có khóa học C++ cho người mới bắt đầu dành riêng cho các bạn.\n\nTrong bài viết này mình sẽ đưa ra các hướng dẫn để làm quen C++ cơ bản nhé.",
+      "price": "40000",
+      "createdAt": "2022-02-20T13:19:18.199Z",
+      "id": "6M2yPmv"
     }
   ],
   "users": [
     {
+      "img": "http://res.cloudinary.com/quannaph18209/image/upload/v1645363048/rbfvbuxon1f1nlhd50nn.png",
       "email": "ngong@gmail.com",
       "password": "$2a$10$sgXQNkWtkzfjsM2G19So8eCkGYAFuF62TZk.VcwfZuUtQSzEi1N2K",
       "id": 1
     },
     {
+      "img": "http://res.cloudinary.com/quannaph18209/image/upload/v1645363048/rbfvbuxon1f1nlhd50nn.png",
       "email": "quan@gmail.com",
       "password": "$2a$10$lnsQInEWdvUvbXA3iFZOCe.8Wght4Ac1jX2mEo.BLEv7NvqyOsp5y",
       "id": 2

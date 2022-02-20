@@ -1,6 +1,6 @@
-import { getAll } from '../../api/products';
+import { getAll } from '../../api/user';
 
-const TableProducts = {
+const TableUsers = {
   async print() {
     const { data } = await getAll();
     return /* html */ `  
@@ -13,16 +13,16 @@ const TableProducts = {
             <thead class="bg-gray-50">
               <tr>
                 <th scope="col" class="px-0 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                ID/Ảnh
+                ID
                 </th>
                 <th scope="col" class="px-0 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Tiêu đề
+                Ảnh
+                </th>
+                <th scope="col" class="px-0 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Email
                </th>
                 <th scope="col" class="px-0 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Mô tả chi tiết
-                </th>
-                <th scope="col" class="px-0 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Tạo lúc
+                Password
                 </th>
               </tr>
             </thead>
@@ -33,22 +33,19 @@ const TableProducts = {
                   <div class=" text-sm font-medium text-gray-900">
                     ${post.id}
                   </div>
-                  <div class="flex-shrink-0 h-10 w-10 lg:mx-3">
-                    <img class="h-10 w-10 rounded-full" src="${post.img}" alt="">
-                  </div>
                 </div>
               </td>
               <td class="lg:px-4 py-4 whitespace-wrap text-center">
-                <div class="text-sm text-gray-900">${post.title}</div>
+              <img class="h-10 w-10 rounded-full" src="${post.img}" alt="">
+              </td>
+              <td class="lg:px-4 py-4 whitespace-wrap text-center">
+                <div class="text-sm text-gray-900">${post.email}</div>
                 <div class="text-sm text-gray-500">Optimization</div>
               </td>
               <td class="px-6 py-4 whitespace-wrap max-w-md">
                 <span class="px-4 inline-flex flex-wrap text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                  ${post.desc}
+                  ${post.password}
                 </span>
-              </td>
-              <td class="px-4 py-4 text-center whitespace-wrap text-sm text-gray-500">
-                ${post.createdAt}
               </td>
               <td class="px-4 py-4 whitespace-wrap text-right text-sm font-medium">
                 <a href="/admin/news/${post.id}/edit" data-id="${post.id}" class="text-indigo-600 hover:text-indigo-900">Sửa</a>
@@ -66,4 +63,4 @@ const TableProducts = {
   </div>`;
   },
 };
-export default TableProducts;
+export default TableUsers;

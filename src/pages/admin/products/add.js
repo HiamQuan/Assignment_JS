@@ -18,6 +18,7 @@ const ProductsAdd = {
     const formAdd = document.querySelector('#form-post');
     const imgPreview = document.querySelector('#img-preview');
     const imgPost = document.querySelector('#file-upload');
+    const createdAt = new Date();
     const CLOUDINARY_API_URL = 'https://api.cloudinary.com/v1_1/quannaph18209/image/upload';
     const CLOUDINARY_PRESET = 'ngongquan';
 
@@ -25,7 +26,7 @@ const ProductsAdd = {
       e.preventDefault();
       imgPreview.src = imgPost.files;
       const file = imgPost.files[0];
-
+      const createAt = new Date();
       const formData = new FormData();
       formData.append('file', file);
       formData.append('upload_preset', CLOUDINARY_PRESET);
@@ -38,11 +39,14 @@ const ProductsAdd = {
       });
       // call api thêm bài viết
       add({
-        title: document.querySelector('#title').value,
+        title: $('#title').val(),
         img: data.url,
-        desc: document.querySelector('#describe').value,
+        desc: $('#describe').val(),
+        price: $('#price').val(),
+        createdAt,
       });
       console.log('Đã thêm thành công');
+      document.location.href = '/admin/products';
     });
   },
 };

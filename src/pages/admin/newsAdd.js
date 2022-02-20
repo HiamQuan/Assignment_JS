@@ -18,6 +18,7 @@ const NewsAdd = {
     const formAdd = document.querySelector('#form-post');
     const imgPreview = document.querySelector('#img-preview');
     const imgPost = document.querySelector('#file-upload');
+    const createdAt = new Date();
     const CLOUDINARY_API_URL = 'https://api.cloudinary.com/v1_1/quannaph18209/image/upload';
     const CLOUDINARY_PRESET = 'ngongquan';
 
@@ -41,6 +42,7 @@ const NewsAdd = {
         title: document.querySelector('#title').value,
         img: data.url,
         desc: document.querySelector('#describe').value,
+        createdAt,
       });
       console.log('Đã thêm thành công');
     });

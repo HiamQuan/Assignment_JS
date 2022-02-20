@@ -1,7 +1,7 @@
 import 'toastr/build/toastr.min.css';
 import toastr from 'toastr';
 import SideBar from '../../../component/admin/sidebar';
-import { remove } from '../../../api/posts';
+import { remove } from '../../../api/products';
 import reRender from '../../../utils';
 import TableProducts from '../../../component/admin/productsTable';
 
@@ -15,7 +15,7 @@ const ProductsAdmin = {
       </div>
 </div>`;
   },
-  async afterPrint() {
+  afterPrint() {
     // lấy danh sách button sau khi render
     const buttons = document.querySelectorAll('.btn');
     // tạo vòng lặp cho nodelist button
@@ -29,7 +29,7 @@ const ProductsAdmin = {
           remove(id).then(() => {
             console.log('Da xoa thanh cong');
             reRender(ProductsAdmin, '#app');
-            toastr.error('Bạn đã xóa thành công !', { timeout: 5000 });
+            toastr.success('Bạn đã xóa thành công !');
           });
         }
       });

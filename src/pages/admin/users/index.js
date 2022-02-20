@@ -1,7 +1,7 @@
 import 'toastr/build/toastr.min.css';
 import toastr from 'toastr';
 import SideBar from '../../../component/admin/sidebar';
-import TableNews from '../../../component/admin/table';
+import TableUsers from '../../../component/admin/userTable';
 import reRender from '../../../utils';
 import { remove } from '../../../api/user';
 
@@ -11,7 +11,7 @@ const Users = {
       ${SideBar.print()}
       <div class="flex flex-col mx-auto">
           <div class=" font-bold text-2xl my-4 uppercase text-center"><h2>Quản lý tài khoản</h2></div>
-          ${await TableNews.print()}
+          ${await TableUsers.print()}
       </div>
 </div>`;
   },
@@ -23,7 +23,7 @@ const Users = {
       // lấy ID từ thuộc tính data-id của button
       const { id } = btn.dataset;
       btn.addEventListener('click', () => {
-        const confirm = window.confirm('Ban co muon xoa bai viet nay khong?');
+        const confirm = window.confirm('Ban co muon xoa tai khoan nay khong?');
         if (confirm) {
           // gọi hàm delete trong folder API và bắn id vào hàm
           remove(id).then(() => {

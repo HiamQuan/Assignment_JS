@@ -2,6 +2,7 @@ import Banner from '../component/banner';
 import News from '../component/news-list';
 import Header from '../component/header';
 import Footer from '../component/footer';
+import ProductHome from '../component/products-list';
 
 const HomePage = {
   async print() {
@@ -14,7 +15,7 @@ const HomePage = {
             </div>
             <div class="news bg-gray-50">
                 ${await News.print()}
-                ${await News.print()}
+                ${await ProductHome.print()}
             </div>
             ${Footer.print()}      
         `;

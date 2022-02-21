@@ -3,7 +3,6 @@ import reRender from '../utils';
 
 const Header = {
   print() {
-    console.log(JSON.parse(localStorage.getItem('user')).user.email);
     return /* html */ `<div class='header py-1'>
     <nav>
       <div class="">
@@ -12,10 +11,9 @@ const Header = {
             <h1 class="text-xl lg:text-2xl font-bold cursor-pointer border-4 border-red-500 px-3">GrandMaster</h1>
             <div class="hidden md:flex justify-around space-x-4">
               <a href="/" class="hover:text-indigo-600 text-gray-700">Trang chủ </a>
-              <a href="/tuyensinh" class="hover:text-indigo-600 text-gray-700">Tuyển sinh</a>
-              <a href="/ctdaotao" class="hover:text-indigo-600 text-gray-700">Chương trình đào tạo</a>
-              <a href="/gocsinhvien" class="hover:text-indigo-600 text-gray-700">Góc sinh viên</a>
-              <a href="/tuyendung" class="hover:text-indigo-600 text-gray-700">Tuyển dụng</a>
+              <a href="/products" class="hover:text-indigo-600 text-gray-700">Khóa học</a>
+              <a href="/ctdaotao" class="hover:text-indigo-600 text-gray-700">Giỏ sản phẩm</a>
+              <a href="/gocsinhvien" class="hover:text-indigo-600 text-gray-700">Blog</a>
               <a href="/admin/dashboard" class="hover:text-indigo-600 text-gray-700">Admin </a>
             </div>
           </div>
@@ -36,7 +34,10 @@ const Header = {
   },
   afterPrint() {
     // lấy thông tin username từ localStorage và hiển thị ra ngoài
+    if(localStorage.getItem('user'))
+    {
     const username = JSON.parse(localStorage.getItem('user')).user.email;
+    
     const logout = document.querySelector('#logout');
 
     document.querySelector('#account-email').innerHTML = username;
@@ -45,7 +46,8 @@ const Header = {
       toastr.success('Logout thành công');
       localStorage.removeItem('user');
       reRender(Header, '#header');
-    });
+      });
+    }
   },
 };
 

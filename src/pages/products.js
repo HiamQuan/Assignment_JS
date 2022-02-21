@@ -1,12 +1,13 @@
 import Footer from '../component/footer';
 import Header from '../component/header';
+import ProductPage from '../component/productPage';
 
-const TuyenSinh = {
-  print() {
+const KhoaHoc = {
+ async print() {
     return /* html */`${Header.print()}
-            <h1>Tuyển Sinh</h1>
+            <h1>${await ProductPage.print()}</h1>
             ${Footer.print()}
         `;
   },
 };
-export default TuyenSinh;
+export default KhoaHoc;

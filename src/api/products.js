@@ -4,6 +4,10 @@ export const getAll = () => {
   const url = '/products';
   return instance.get(url);
 };
+export const getSome = () => {
+  const url = '/products?_start=1&_limit=3';
+  return instance.get(url);
+};
 export const get = (id) => {
   const url = `/products/${id}`;
   return instance.get(url);

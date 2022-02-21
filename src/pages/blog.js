@@ -1,10 +1,11 @@
 import Footer from '../component/footer';
 import Header from '../component/header';
+import NewsPage from '../component/newsPage';
 
 const GocSinhVien = {
-  print() {
+ async print() {
     return /* html */`${Header.print()}
-                <h1>Góc sinh viên</h1>
+                <h1>${ await NewsPage.print()}</h1>
                 ${Footer.print()}
             `;
   },

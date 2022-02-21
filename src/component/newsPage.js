@@ -1,11 +1,12 @@
 import { getAll, getSome } from '../api/posts';
+import News from './news-list';
 
-const News = {
+const NewsPage = {
   async print() {
-    const { data } = await getSome();
+    const { data } = await getAll();
     return /* html */ `
         <div class="container mx-auto px-10">
-            <h2 class="my-8 uppercase font-bold text-2xl text-gray-700"><a href="/blog" class="hover:text-indigo-500">Cập nhật tin tức</a></h2>
+            <h2 class="my-8 uppercase font-bold text-2xl text-gray-700"><a href="/blog" class="hover:text-indigo-500">Các bài viết</a></h2>
             <div class="grid grid-cols-3 gap-8">
                 ${data.map((post) => /* html */ `
                     <div class="border p-3 cursor-pointer">
@@ -21,4 +22,4 @@ const News = {
         `;
   },
 };
-export default News;
+export default NewsPage;

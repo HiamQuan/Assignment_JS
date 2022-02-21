@@ -5,9 +5,8 @@ import DetailPage from './pages/detail';
 import HomePage from './pages/homepage';
 import Login from './pages/login';
 import SignUp from './pages/signup';
-import TuyenSinh from './pages/tuyensinh';
 import DaoTao from './pages/ctdaotao';
-import GocSinhVien from './pages/gocsinhvien';
+import GocSinhVien from './pages/blog';
 import TuyenDung from './pages/tuyendung';
 import DashBoard from './pages/admin/dashboard';
 import NewsAdmin from './pages/admin/news-admin';
@@ -19,6 +18,7 @@ import ProductsEdit from './pages/admin/products/edit';
 import UserAdd from './pages/admin/users/add';
 import UserEdit from './pages/admin/users/edit';
 import Users from './pages/admin/users';
+import KhoaHoc from './pages/products';
 
 const router = new Navigo('/', { linksSelector: 'a', hash: true });
 
@@ -58,8 +58,11 @@ router.on({
   "/news/:id": ({ data }) => {
     RenderPage.render(DetailPage, data.id);
   },
-  '/tuyensinh': () => {
-    RenderPage.render(TuyenSinh);
+  '/products': () => {
+    RenderPage.render(KhoaHoc);
+  },
+  "/news/:id": ({ data }) => {
+    RenderPage.render(DetailPage, data.id);
   },
   '/ctdaotao': () => {
     RenderPage.render(DaoTao);

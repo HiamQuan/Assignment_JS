@@ -26,7 +26,6 @@ const ProductsAdd = {
       e.preventDefault();
       imgPreview.src = imgPost.files;
       const file = imgPost.files[0];
-      const createAt = new Date();
       const formData = new FormData();
       formData.append('file', file);
       formData.append('upload_preset', CLOUDINARY_PRESET);

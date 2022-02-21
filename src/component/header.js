@@ -34,18 +34,17 @@ const Header = {
   },
   afterPrint() {
     // lấy thông tin username từ localStorage và hiển thị ra ngoài
-    if(localStorage.getItem('user'))
-    {
-    const username = JSON.parse(localStorage.getItem('user')).user.email;
-    
-    const logout = document.querySelector('#logout');
+    if (localStorage.getItem('user')) {
+      const username = JSON.parse(localStorage.getItem('user')).user.email;
 
-    document.querySelector('#account-email').innerHTML = username;
-    // logout
-    logout.addEventListener('click', () => {
-      toastr.success('Logout thành công');
-      localStorage.removeItem('user');
-      reRender(Header, '#header');
+      const logout = document.querySelector('#logout');
+
+      document.querySelector('#account-email').innerHTML = username;
+      // logout
+      logout.addEventListener('click', () => {
+        toastr.success('Logout thành công');
+        localStorage.removeItem('user');
+        reRender(Header, '#header');
       });
     }
   },

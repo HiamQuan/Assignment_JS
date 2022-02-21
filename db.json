@@ -5,70 +5,80 @@
       "title": "nguyen anh quan",
       "img": "http://placeimg.com/640/480/people",
       "desc": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-      "id": "6"
+      "id": "6",
+      "view": 2
     },
     {
       "createdAt": "2022-02-18T09:12:22.614Z",
       "title": "ngongquan",
       "img": "http://placeimg.com/640/480/business",
       "desc": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-      "id": "7"
+      "id": "7",
+      "view": 4
     },
     {
       "createdAt": "2022-01-15T01:54:24.955Z",
       "title": "Tiffany Wisoky",
       "img": "http://placeimg.com/640/480/cats",
       "desc": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "id": "8"
+      "id": "8",
+      "view": 20
     },
     {
       "createdAt": "2022-01-15T02:36:13.715Z",
       "title": "Mr. Doug Purdy",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "The Football Is Good For Training And Recreational Purposes",
-      "id": "9"
+      "id": "9",
+      "view": 30
     },
     {
       "createdAt": "2022-01-14T12:38:27.738Z",
       "title": "Marty Kuhn",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "id": "10"
+      "id": "10",
+      "view": 35
     },
     {
       "createdAt": "2022-01-14T17:58:26.446Z",
       "title": "Vickie Jast",
       "img": "http://placeimg.com/640/480/technics",
       "desc": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-      "id": "11"
+      "id": "11",
+      "view": 5
     },
     {
       "createdAt": "2022-01-14T21:28:17.597Z",
       "title": "Eunice Hilpert",
       "img": "http://placeimg.com/640/480/nightlife",
       "desc": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
-      "id": "12"
+      "id": "12",
+      "view": 25
     },
     {
       "createdAt": "2022-01-15T02:21:11.908Z",
       "title": "Mrs. Drew Farrell",
       "img": "http://placeimg.com/640/480/fashion",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "id": "13"
+      "id": "13",
+      "view": 40
     },
     {
       "createdAt": "2022-01-14T11:14:02.843Z",
       "title": "Lorena Cole",
       "img": "http://placeimg.com/640/480/technics",
       "desc": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "id": "14"
+      "id": "14",
+      "view": 3
     },
     {
       "createdAt": "2022-01-15T00:11:58.958Z",
       "title": "Genevieve Vandervort",
       "img": "http://placeimg.com/640/480/technics",
       "desc": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-      "id": "15"
+      "id": "15",
+      "view": 40
     }
   ],
   "products": [
@@ -79,16 +89,16 @@
       "price": "20",
       "createdAt": "2022-02-20T13:16:04.987Z",
       "id": "Pipjqgz",
-      "tag": "FE"
+      "tag": "fe"
     },
     {
       "title": "JavaScript Nâng Cao",
       "img": "https://res.cloudinary.com/quannaph18209/image/upload/c_fit,h_343,q_89,r_27/v1645363048/rbfvbuxon1f1nlhd50nn.png",
-      "desc": "avaScript là ngôn ngữ lập trình website phổ biến hiện nay, nó được tích hợp và nhúng vào HTML giúp website trở nên sống động hơn. JavaScript đóng vai trò như là một phần của trang web, thực thi cho phép Client-side script từ phía người dùng cũng như phía máy chủ (Nodejs) tạo ra các trang web động.",
+      "desc": "JavaScript là ngôn ngữ lập trình website phổ biến hiện nay, nó được tích hợp và nhúng vào HTML giúp website trở nên sống động hơn. JavaScript đóng vai trò như là một phần của trang web, thực thi cho phép Client-side script từ phía người dùng cũng như phía máy chủ (Nodejs) tạo ra các trang web động.",
       "price": "20",
       "createdAt": "2022-02-20T13:16:45.998Z",
       "id": "pVN8j5x",
-      "tag": "FE"
+      "tag": "fe"
     },
     {
       "title": "ReactJS",
@@ -97,7 +107,7 @@
       "price": "20",
       "createdAt": "2022-02-20T13:17:43.979Z",
       "id": "dNt_q00",
-      "tag": "FE"
+      "tag": "fe"
     },
     {
       "title": "VueJS",
@@ -106,16 +116,16 @@
       "price": "30",
       "createdAt": "2022-02-20T13:18:30.074Z",
       "id": "u-85blw",
-      "tag": "FE"
+      "tag": "fe"
     },
-    {
-      "title": "C++",
+    { 
+      "title": "Cplus",
       "img": "http://res.cloudinary.com/quannaph18209/image/upload/v1645363193/fexsv2agxrucznotypip.jpg",
       "desc": "Khi bắt đầu học lập trình, có rất nhiều ngôn ngữ để lựa chọn. C/C++ là một ngôn ngữ lâu đời, có tốc độ nhanh, các kiểu dữ liệu rõ ràng. Nếu như làm chủ được ngôn ngữ nền tảng như C/C++ thì sau này học các ngôn ngữ khác trở nên dễ dàng hơn, do đó rất phù hợp với người mới bắt đầu. Học lập trình C/C++ có rất nhiều ứng dụng và mở ra cho bạn cực kỳ đa dạng các cơ hội để làm việc cho các công ty/tập đoàn lớn.\n\nTheo mình thấy, với người mới học thì C hay C++ không có quá nhiều sự khác biệt trong cú pháp, C++ còn có thể sử dụng để lập trình hướng đối tượng -  Phần này sẽ không được giới thiệu vì trong khuôn khổ bài viết là hướng dẫn lập tình C++ cơ bản. Hiện tại Codelearn đã có khóa học C++ cho người mới bắt đầu dành riêng cho các bạn.\n\nTrong bài viết này mình sẽ đưa ra các hướng dẫn để làm quen C++ cơ bản nhé.",
       "price": "40",
       "createdAt": "2022-02-20T13:19:18.199Z",
       "id": "6M2yPmv",
-      "tag": "BE"
+      "tag": "be"
     }
   ],
   "users": [

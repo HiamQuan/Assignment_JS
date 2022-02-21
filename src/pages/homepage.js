@@ -1,5 +1,6 @@
 import Banner from '../component/banner';
 import News from '../component/news-list';
+// eslint-disable-next-line import/no-cycle
 import Header from '../component/header';
 import Footer from '../component/footer';
 import ProductHome from '../component/products-list';
@@ -21,7 +22,7 @@ const HomePage = {
         `;
   },
   afterPrint() {
-    return Header.afterPrint();
+    Header.afterPrint();
   },
 };
 export default HomePage;

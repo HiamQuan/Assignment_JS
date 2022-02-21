@@ -24,3 +24,11 @@ export const update = (post) => {
   const url = `/products/${post.id}`;
   return instance.put(url, post);
 };
+export const filter = (category, price) => {
+  const url = `/products?tag=${category}${price}`;
+  return instance.get(url);
+};
+export const filterSearch = (title) => {
+  const url = `/products?title_like=${title}`;
+  return instance.get(url);
+};

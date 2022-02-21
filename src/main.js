@@ -19,6 +19,7 @@ import UserAdd from './pages/admin/users/add';
 import UserEdit from './pages/admin/users/edit';
 import Users from './pages/admin/users';
 import KhoaHoc from './pages/products';
+import DetailProd from './pages/detailProducts';
 
 const router = new Navigo('/', { linksSelector: 'a', hash: true });
 
@@ -61,8 +62,8 @@ router.on({
   '/products': () => {
     RenderPage.render(KhoaHoc);
   },
-  "/news/:id": ({ data }) => {
-    RenderPage.render(DetailPage, data.id);
+  '/products/:id': ({ data }) => {
+    RenderPage.render(DetailProd, data.id);
   },
   '/ctdaotao': () => {
     RenderPage.render(DaoTao);

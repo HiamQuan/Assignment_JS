@@ -9,5 +9,8 @@ const GocSinhVien = {
                 ${Footer.print()}
             `;
   },
+  afterPrint() {
+    Header.afterPrint();
+  },
 };
 export default GocSinhVien;

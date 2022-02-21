@@ -1,4 +1,5 @@
 import toastr from 'toastr';
+import HomePage from '../pages/homepage';
 import reRender from '../utils';
 
 const Header = {
@@ -44,7 +45,7 @@ const Header = {
       logout.addEventListener('click', () => {
         toastr.success('Logout thành công');
         localStorage.removeItem('user');
-        reRender(Header, '#header');
+        reRender(HomePage, '#app');
       });
     }
   },

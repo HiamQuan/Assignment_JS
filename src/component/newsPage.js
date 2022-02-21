@@ -1,4 +1,4 @@
-import { getAll, getSome } from '../api/posts';
+import { getAll } from '../api/posts';
 import News from './news-list';
 
 const NewsPage = {

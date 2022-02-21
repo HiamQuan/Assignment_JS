@@ -1,6 +1,6 @@
-const reRender = async (component, domElement) => {
+const reRender = async (component, domElement, result) => {
   if (component) {
-    document.querySelector(domElement).innerHTML = await component.print();
+    document.querySelector(domElement).innerHTML = await component.print(result);
   }
   if (component.afterPrint) await component.afterPrint();
 };

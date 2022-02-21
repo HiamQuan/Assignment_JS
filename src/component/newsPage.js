@@ -1,9 +1,5 @@
-import { getAll } from '../api/posts';
-import News from './news-list';
-
 const NewsPage = {
-  async print() {
-    const { data } = await getAll();
+  async print(data) {
     return /* html */ `
         <div class="container mx-auto px-10">
             <h2 class="my-8 uppercase font-bold text-2xl text-gray-700"><a href="/blog" class="hover:text-indigo-500">Các bài viết</a></h2>
@@ -18,8 +14,15 @@ const NewsPage = {
                     </div>  
                     `).join('')}
             </div>
+            <div class="pagination mx-auto flex item-center">
+                    <ul class="flex mx-auto">
+                        <li><button class="btn page1 mx-4 px-2 bg-indigo-400 rounded-full">1</button></li>
+                        <li><button  class="btn page2 px-2 bg-indigo-400 rounded-full">2</button></li>
+                    </ul>
+            </div>
         </div>
         `;
   },
+
 };
 export default NewsPage;

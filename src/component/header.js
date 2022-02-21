@@ -14,7 +14,7 @@ const Header = {
               <a href="/" class="hover:text-indigo-600 text-gray-700">Trang chủ </a>
               <a href="/products" class="hover:text-indigo-600 text-gray-700">Khóa học</a>
               <a href="/ctdaotao" class="hover:text-indigo-600 text-gray-700">Giỏ sản phẩm</a>
-              <a href="/gocsinhvien" class="hover:text-indigo-600 text-gray-700">Blog</a>
+              <a href="/blog" class="hover:text-indigo-600 text-gray-700">Blog</a>
               <a href="/admin/dashboard" class="hover:text-indigo-600 text-gray-700">Admin </a>
             </div>
           </div>

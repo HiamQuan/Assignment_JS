@@ -1,4 +1,4 @@
-import { getAll, getSome } from '../api/products';
+import { getSome } from '../api/products';
 
 const ProductHome = {
   async print() {

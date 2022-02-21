@@ -6,7 +6,6 @@ import HomePage from './pages/homepage';
 import Login from './pages/login';
 import SignUp from './pages/signup';
 import DaoTao from './pages/ctdaotao';
-import GocSinhVien from './pages/blog';
 import TuyenDung from './pages/tuyendung';
 import DashBoard from './pages/admin/dashboard';
 import NewsAdmin from './pages/admin/news-admin';
@@ -20,8 +19,12 @@ import UserEdit from './pages/admin/users/edit';
 import Users from './pages/admin/users';
 import KhoaHoc from './pages/products';
 import DetailProd from './pages/detailProducts';
+import Blog from './pages/blog';
 
 const router = new Navigo('/', { linksSelector: 'a', hash: true });
+router.render = (req, res) => {
+  res.jsonp(res.locals.data);
+};
 
 router.on('/admin/*/', () => {}, {
   before(done) {
@@ -52,8 +55,8 @@ router.on({
   '/about': () => {
     RenderPage.render(AboutPage);
   },
-  '/gocsinhvien': () => {
-    RenderPage.render(GocSinhVien);
+  '/blog': () => {
+    RenderPage.render(Blog);
   },
   // eslint-disable-next-line quotes
   "/news/:id": ({ data }) => {

@@ -1,3 +1,5 @@
+import $ from 'jquery';
+import validate from 'jquery-validation';
 import Header from '../component/header';
 import Footer from '../component/footer';
 import { signin } from '../api/user';

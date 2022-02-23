@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import { get1Page, get2Page, getAll } from '../api/posts';
 import Footer from '../component/footer';
 import Header from '../component/header';

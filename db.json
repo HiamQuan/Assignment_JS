@@ -1,12 +1,11 @@
 {
   "posts": [
     {
-      "createdAt": "2022-02-18T09:12:04.952Z",
-      "title": "nguyen anh quan",
+      "createdAt": "2022-02-22T03:10:37.805Z",
+      "title": "quan",
       "img": "http://res.cloudinary.com/quannaph18209/image/upload/v1645363151/mhz80locrfu9eq7o6ytv.png",
       "desc": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-      "id": "6",
-      "view": 2
+      "id": "6"
     },
     {
       "createdAt": "2022-02-18T09:12:22.614Z",
@@ -118,7 +117,7 @@
       "id": "u-85blw",
       "tag": "fe"
     },
-    { 
+    {
       "title": "Cplus",
       "img": "http://res.cloudinary.com/quannaph18209/image/upload/v1645363193/fexsv2agxrucznotypip.jpg",
       "desc": "Khi bắt đầu học lập trình, có rất nhiều ngôn ngữ để lựa chọn. C/C++ là một ngôn ngữ lâu đời, có tốc độ nhanh, các kiểu dữ liệu rõ ràng. Nếu như làm chủ được ngôn ngữ nền tảng như C/C++ thì sau này học các ngôn ngữ khác trở nên dễ dàng hơn, do đó rất phù hợp với người mới bắt đầu. Học lập trình C/C++ có rất nhiều ứng dụng và mở ra cho bạn cực kỳ đa dạng các cơ hội để làm việc cho các công ty/tập đoàn lớn.\n\nTheo mình thấy, với người mới học thì C hay C++ không có quá nhiều sự khác biệt trong cú pháp, C++ còn có thể sử dụng để lập trình hướng đối tượng -  Phần này sẽ không được giới thiệu vì trong khuôn khổ bài viết là hướng dẫn lập tình C++ cơ bản. Hiện tại Codelearn đã có khóa học C++ cho người mới bắt đầu dành riêng cho các bạn.\n\nTrong bài viết này mình sẽ đưa ra các hướng dẫn để làm quen C++ cơ bản nhé.",

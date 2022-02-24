@@ -1,5 +1,8 @@
+import $ from 'jquery';
+import validate from 'jquery-validation';
 import Header from '../component/header';
 import Footer from '../component/footer';
+import { signin } from '../api/user';
 
 const Login = {
   print() {
@@ -37,9 +40,9 @@ const Login = {
             <p class="text-gray-100">
                 or use email your account
             </p>
-            <form action="" class="sm:w-2/3 w-full px-4 lg:px-0 mx-auto">
+            <form class="sm:w-2/3 w-full px-4 lg:px-0 mx-auto" id="formSignin">
                 <div class="pb-2 pt-4">
-                    <input type="email" name="email" id="email" placeholder="Email" class="block w-full p-4 text-lg rounded-sm bg-black">
+                    <input type="text" name="email" id="email" placeholder="Email" class="block w-full p-4 text-lg rounded-sm bg-black">
                 </div>
                 <div class="pb-2 pt-4">
                     <input class="block w-full p-4 text-lg rounded-sm bg-black" type="password" name="password" id="password" placeholder="Password">
@@ -48,7 +51,7 @@ const Login = {
                     <a href="#">Forgot your password?</a>
                 </div>
                 <div class="px-4 pb-2 pt-4">
-                    <button class="uppercase block w-full p-4 text-lg rounded-full bg-indigo-500 hover:bg-indigo-600 focus:outline-none">sign in</button>
+                    <button type="submit" class="uppercase block w-full p-4 text-lg rounded-full bg-indigo-500 hover:bg-indigo-600 focus:outline-none">sign in</button>
                 </div>
 
                 <div class="p-4 text-center right-0 left-0 flex justify-center space-x-4 mt-16 lg:hidden ">
@@ -66,7 +69,27 @@ const Login = {
         </div>
     </div>
 </section>
-${Footer.print()}`;
+                ${Footer.print()}`;
+  },
+
+  afterPrint() {
+    const formSignin = document.querySelector('#formSignin');
+    formSignin.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const response = await signin({
+        email: document.querySelector('#email').value,
+        password: document.querySelector('#password').value,
+      });
+      // lưu thông tin user vào localStorage
+      localStorage.setItem('user', JSON.stringify(response.data));
+      if (response.data.user.id === 1) {
+        // nếu là admin thì chuyển trang
+        document.location.href = '/admin/news';
+      } else {
+        // ngược lại nếu là member => id != 1
+        document.location.href = '/';
+      }
+    });
   },
 };
 

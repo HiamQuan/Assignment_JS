@@ -1,17 +1,17 @@
 import 'toastr/build/toastr.min.css';
 import toastr from 'toastr';
-import SideBar from '../../component/admin/sidebar';
-import TableNews from '../../component/admin/table';
-import { remove } from '../../api/posts';
-import reRender from '../../utils';
+import SideBar from '../../../component/admin/sidebar';
+import { remove } from '../../../api/products';
+import reRender from '../../../utils';
+import TableProducts from '../../../component/admin/productsTable';
 
-const NewsAdmin = {
+const ProductsAdmin = {
   async print() {
     return /* html */ `<div class="min-h-screen flex relative">
       ${SideBar.print()}
       <div class="flex flex-col mx-auto">
-          <div class=" font-bold text-2xl my-4 uppercase text-center"><h2>Quản lý tin tức</h2></div>
-          ${await TableNews.print()}
+          <div class=" font-bold text-2xl my-4 uppercase"><h2>Quản lý tin tức</h2></div>
+          ${await TableProducts.print()}
       </div>
 </div>`;
   },
@@ -23,12 +23,12 @@ const NewsAdmin = {
       // lấy ID từ thuộc tính data-id của button
       const { id } = btn.dataset;
       btn.addEventListener('click', () => {
-        const confirm = window.confirm('Ban co muon xoa bai viet nay khong?');
+        const confirm = window.confirm('Ban co muon xoa khoa hoc nay khong?');
         if (confirm) {
           // gọi hàm delete trong folder API và bắn id vào hàm
           remove(id).then(() => {
             console.log('Da xoa thanh cong');
-            reRender(NewsAdmin, '#app');
+            reRender(ProductsAdmin, '#app');
             toastr.success('Bạn đã xóa thành công !');
           });
         }
@@ -36,4 +36,4 @@ const NewsAdmin = {
     });
   },
 };
-export default NewsAdmin;
+export default ProductsAdmin;

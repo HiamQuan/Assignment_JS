@@ -1,17 +1,17 @@
 import axios from 'axios';
 import $ from 'jquery';
 import validate from 'jquery-validation';
-import FormNews from '../../component/admin/formNews';
-import SideBar from '../../component/admin/sidebar';
-import { add } from '../../api/posts';
+import SideBar from '../../../component/admin/sidebar';
+import { add } from '../../../api/products';
+import FormProduct from '../../../component/admin/formProducts';
 // import { listItem } from '../../data';
 
-const NewsAdd = {
+const ProductsAdd = {
   print() {
     return /* html */ `
    <div class="relative flex min-h-screen">
    ${SideBar.print()}
-   ${FormNews.print(null)}
+   ${FormProduct.print(null)}
    </div>`;
   },
   afterPrint() {
@@ -26,7 +26,6 @@ const NewsAdd = {
       e.preventDefault();
       imgPreview.src = imgPost.files;
       const file = imgPost.files[0];
-
       const formData = new FormData();
       formData.append('file', file);
       formData.append('upload_preset', CLOUDINARY_PRESET);
@@ -39,13 +38,15 @@ const NewsAdd = {
       });
       // call api thêm bài viết
       add({
-        title: document.querySelector('#title').value,
+        title: $('#title').val(),
         img: data.url,
-        desc: document.querySelector('#describe').value,
+        desc: $('#describe').val(),
+        price: $('#price').val(),
         createdAt,
       });
       console.log('Đã thêm thành công');
+      document.location.href = '/admin/products';
     });
   },
 };
-export default NewsAdd;
+export default ProductsAdd;

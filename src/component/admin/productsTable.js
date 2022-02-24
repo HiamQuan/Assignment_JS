@@ -1,10 +1,11 @@
-import { getAll } from '../../api/posts';
+import { getAll } from '../../api/products';
 
-const TableNews = {
+const TableProducts = {
   async print() {
     const { data } = await getAll();
-    return /* html */ `  <div class="flex flex-col m-auto">
-    <button class="text-center rounded-full"> Thêm</button>
+    return /* html */ `  
+    <a href = "/admin/products/add"><button> Thêm </button></a>
+    <div class="flex flex-col m-auto">
     <div class="my-2 overflow-x-auto sm:-mx-6 lg:-mx-2">
       <div class="py-2 align-middle inline-block sm:px-2 lg:px-0">
         <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
@@ -65,4 +66,4 @@ const TableNews = {
   </div>`;
   },
 };
-export default TableNews;
+export default TableProducts;

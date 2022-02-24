@@ -1,12 +1,12 @@
 import axios from 'axios';
 import $ from 'jquery';
 import validate from 'jquery-validation';
-import FormNews from '../../component/admin/formNews';
-import SideBar from '../../component/admin/sidebar';
-import { add } from '../../api/posts';
+import SideBar from '../../../component/admin/sidebar';
+import { add } from '../../../api/products';
+import FormNews from '../../../component/admin/formNews';
 // import { listItem } from '../../data';
 
-const NewsAdd = {
+const UserAdd = {
   print() {
     return /* html */ `
    <div class="relative flex min-h-screen">
@@ -18,7 +18,6 @@ const NewsAdd = {
     const formAdd = document.querySelector('#form-post');
     const imgPreview = document.querySelector('#img-preview');
     const imgPost = document.querySelector('#file-upload');
-    const createdAt = new Date();
     const CLOUDINARY_API_URL = 'https://api.cloudinary.com/v1_1/quannaph18209/image/upload';
     const CLOUDINARY_PRESET = 'ngongquan';
 
@@ -42,10 +41,9 @@ const NewsAdd = {
         title: document.querySelector('#title').value,
         img: data.url,
         desc: document.querySelector('#describe').value,
-        createdAt,
       });
       console.log('Đã thêm thành công');
     });
   },
 };
-export default NewsAdd;
+export default UserAdd;
